@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-fondo: #9587dd;
+  --color-pregunta: #ffffff;
+  --color-fondo-opcion: #7c67d1;
+  --color-opcion: #ffffff;
+  --color-correcto: #4caf50;
+  --color-incorrecto: #e74c3c;
+
+  --pregunta-tamaño: 2rem;
+  --tamaño-opcion: 1.2rem;
+}
+
+@font-face {
+  font-family: "Crafter Signature";
+  src: url("./assets/Crafter Signature Serif.ttf");
+}
+
+body {
+  background-color: var(--color-fondo);
+  font-family: "Crafter Signature", sans-serif;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+.pregunta {
+  color: var(--color-pregunta);
+  font-size: var(--pregunta-tamaño);
+  margin-bottom: 24px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.opcion,
+.btn-respuesta {
+  display: block;
+  width: 100%;
+  background-color: var(--color-fondo-opcion);
+  margin: 10px 0;
+  padding: 12px;
+  font-size: var(--tamaño-opcion);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--color-opcion);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.opcion:hover,
+.btn-respuesta:hover {
+  background-color: var(--color-pregunta);
+  color: #333;
+  transform: scale(1.05);
+}
+
+.btn-correcto {
+  background-color: var(--color-correcto) !important;
+  color: white !important;
+}
+
+.btn-incorrecto {
+  background-color: var(--color-incorrecto) !important;
+  color: white !important;
+}
+
+#contenedor-resultados {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
